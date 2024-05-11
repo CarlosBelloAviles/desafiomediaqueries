@@ -1,0 +1,351 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  /*Version Mobil*/
+  
+  body {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 120px 120px 2fr 100px;
+    grid-template-areas:
+      "nav"
+      "filtro"
+      "main"
+      "footer";
+      max-width: 100vw;
+  }
+  .container-flex {
+    background-image: radial-gradient(
+      circle 1292px at -13.6% 51.7%,
+      rgba(0, 56, 68, 1) 0%,
+      rgba(163, 217, 185, 1) 51.5%,
+      rgba(255, 252, 247, 1) 88.6%
+    );
+    grid-area: nav;
+  }
+  
+  .nav-flex {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
+  .titulo-flex {
+    display: flex;
+    gap: 15px;
+  }
+  
+  h1 {
+    color: white;
+    font-family: "Crete Round", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  i {
+    color: white;
+  }
+  
+  .fa-tv {
+    padding-left: 35px;
+  }
+  .fa-bars {
+    padding-right: 35px;
+  }
+  
+  .nav-menu :hover {
+    color: black;
+  }
+  
+  #Menu {
+    display: none;
+  }
+  
+  #Menu li a {
+    color: aliceblue;
+    font-size: 18px;
+    font-family: "Crete Round", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .filtro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(
+      circle 815px at 23.4% -21.8%,
+      rgb(241, 242, 243) 0.2%,
+      rgba(0, 0, 0, 1) 100.2%
+    );
+    padding-top: 15px;
+    padding-bottom: 15px;
+    grid-area: filtro;
+  }
+  
+  .form-select {
+    width: 450px;
+    height: 40px;
+    border-radius: 6px;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  
+  .articulos {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+    gap: 20px;
+    
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  .card-items {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    border: 2px solid rgb(192, 191, 191);
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+  }
+  
+  img {
+    height: 260pxpx;
+    width: 100%;
+  }
+  
+  h3{
+    font-family: "Taviraj", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .card-items p{
+    font-family: "Taviraj", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: darkred;
+  }
+  
+  .btn {
+    width: 150px;
+    height: 35px;
+  }
+  
+  button {
+    width: 150px;
+    height: 35px;
+    background-color: rgb(87, 58, 58);
+  }
+  
+  .btn-link {
+    color: beige;
+  }
+  
+  .btn :hover {
+    background-color: rgb(37, 9, 9);
+  }
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    margin-top: 30px;
+  }
+  .page-item {
+    border: 1px solid white;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(19, 32, 19);
+  }
+  
+  .page-item a {
+    color: white;
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: darkcyan;
+    grid-area: footer;
+  }
+  .iconos {
+    display: flex;
+    gap: 15px;
+  }
+  
+  footer p{
+    color: white;
+  }
+  
+  /*Version Tablet*/
+  
+  @media (min-width: 620px) {
+    body {
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 8rem 4fr 8rem;
+      grid-template-areas:
+        "nav nav"
+        "filtro main"
+        "filtro main"
+        "footer footer";
+    }
+  
+    .container-flex{
+      background-image: radial-gradient(circle at 44% 13%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 98%,transparent 98%, transparent 100%),radial-gradient(circle at 87% 84%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 46%,transparent 46%, transparent 100%),radial-gradient(circle at 84% 60%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 40%,transparent 40%, transparent 100%),radial-gradient(circle at 21% 32%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 28%,transparent 28%, transparent 100%),radial-gradient(circle at 57% 12%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 34%,transparent 34%, transparent 100%),radial-gradient(circle at 33% 60%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 29%,transparent 29%, transparent 100%),radial-gradient(circle at 3% 11%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 60%,transparent 60%, transparent 100%),radial-gradient(circle at 0% 74%, hsla(237,0%,100%,0.05) 0%, hsla(237,0%,100%,0.05) 87%,transparent 87%, transparent 100%),linear-gradient(45deg, rgb(99, 105, 190),rgb(99, 70, 205));
+    }
+    .nav-menu {
+      display: none;
+    }
+    #Menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 25px;
+      gap: 10px;
+    }
+  
+    .filtro {
+      justify-content: initial;
+    }
+    .form-select {
+      width: 160px;
+      height: 40px;
+      align-items: center;
+      border-radius: 6px;
+    }
+  
+    .articulos {
+      display: grid;
+      row-gap: 15px;
+      column-gap: 15px;
+      grid-template-columns: auto auto;
+      grid-template-rows: repeat(5, 1fr);
+    }
+    .card-items {
+      width: 170px;
+      text-align: center;
+      border: 1px solid rgb(131, 104, 104);
+    }
+    img {
+      mix-blend-mode: multiply;
+      width: 100%;
+      height: 100px;
+    }
+  
+    button {
+      width: 130px;
+      height: 30px;
+    }
+  
+    footer {
+      padding-top: 15px;
+      padding-bottom: 15px ;
+      background-image: radial-gradient(circle at 67% 83%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 1%,transparent 1%, transparent 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 80%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 27%,transparent 27%, transparent 63%,transparent 63%, transparent 100%),radial-gradient(circle at 23% 5%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 26%,transparent 26%, transparent 82%,transparent 82%, transparent 100%),radial-gradient(circle at 21% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 35%,transparent 35%, transparent 45%,transparent 45%, transparent 100%),radial-gradient(circle at 10% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 21%,transparent 21%, transparent 81%,transparent 81%, transparent 100%),radial-gradient(circle at 19% 61%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 20%,transparent 20%, transparent 61%,transparent 61%, transparent 100%),radial-gradient(circle at 13% 77%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 63%,transparent 63%, transparent 72%,transparent 72%, transparent 100%),radial-gradient(circle at 30% 93%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 33%,transparent 33%, transparent 82%,transparent 82%, transparent 100%),linear-gradient(90deg, rgb(22, 176, 207),rgb(103, 7, 215));
+    }
+  }
+  
+  /* version Escritorio */
+  
+  @media (min-width: 992px) {
+    body {
+      grid-template-columns: 14rem 1fr;
+      grid-template-rows: 90px calc(100vh - 90px - 70px) 70px;
+      grid-template-areas:
+        "nav filtro"
+        "nav main"
+        "nav main"
+        "footer main";
+    }
+  
+    .fa-bars {
+      visibility: hidden;
+    }
+  
+    .nav-flex {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .form-select {
+      width: 650px;
+    }
+  
+    #Menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 15px;
+    }
+  
+    .main {
+      background-image: linear-gradient(
+        58.2deg,
+        rgba(211, 215, 224, 0.73) -3%,
+        rgba(131, 107, 129, 0.45) 49.3%,
+        rgba(255, 204, 112, 0.37) 97.7%
+      );
+    }
+  
+    .articulos {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      padding-left: 10px;
+      padding-right: 10px;
+      row-gap: 24px;
+      column-gap: 14px;
+      height: 100vh;
+    }
+  
+    .card-items {
+      width: 220px;
+      text-align: center;
+      border: 1px solid rgb(131, 104, 104);
+    }
+   
+    img {
+      mix-blend-mode: multiply;
+      width: 100%;
+      height: 160px;
+    }
+  
+    footer {
+      justify-content: normal;
+      align-items: center;
+      
+    }
+    .iconos{
+      padding-top: 20px;
+    }
+  }
